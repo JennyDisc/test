@@ -35,7 +35,7 @@ export default {
       this.$http.defaults.headers.common.Authorization = token
       const loginCheckurl = `${VITE_APP_URL}v2/api/user/check`
       console.log(loginCheckurl)
-      this.$http.post(loginCheckurl, token)
+      this.$http.post(loginCheckurl)
         .then(res => {
           console.log(res)
           if (!res.data.success) {
